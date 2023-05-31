@@ -30,8 +30,8 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
-                <div class="col mr-1  col-md-4 col-lx-2 mt-4 ">
-                    <button type="button" type="submit" class="btn btn-info btn-lg" > Reserve Campsite 
+                <div class="col mr-1 col-md-4 col-xl-2 mt-4 "> <!-- she has col-md-4 instead of my col mr-1. explain why?-->
+                    <button type="button" type="submit" class="btn btn-info btn-lg" data-toggle="tooltip"data-placement="bottom" data-html="true" title="or call us at <br /><strong>1-206-555-1234</strong>" > Reserve Campsite 
                         <!-- I was looking at this page for inserting a scrolling functionality but unsure how to do it yet. https://getbootstrap.com/docs/4.6/components/scrollspy/#item-1-->
                     </button>
                 </div> 
@@ -208,6 +208,12 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(function(){
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
 </body>
 
 </html>
