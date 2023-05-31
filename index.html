@@ -23,16 +23,25 @@
     <header class="jumbotron jumbotron-fluid">
         <div class="container">
             <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/logo.png" class="img fluid" />
+                </div>
                 <div class="col">
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col mr-1  col-md-4 col-lx-2 mt-4 ">
+                    <button type="button" type="submit" class="btn btn-info btn-lg" > Reserve Campsite 
+                        <!-- I was looking at this page for inserting a scrolling functionality but unsure how to do it yet. https://getbootstrap.com/docs/4.6/components/scrollspy/#item-1-->
+                    </button>
+                </div> 
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" height="30 width=30" /></a>
             <button class="navbar toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,23 +57,32 @@
                                 class="fa fa-address-card fa-lg"></i> Contact</a></li>
                 </ul>
             </div>
-        </nav>
+    </nav>
     </div>
 
     <div class="container">
-        <div class="media"> <!---->
-            <div class="media-body"> <!---->
+        <div class="media"> 
+            <div class="media-body"> 
                 <div class="row row-content align-items-center">
                     <div class="col-sm-4 order-sm-last col-md-3">
                         <h2 class="text-sm-right"> Discover & Review</h2>
                     </div>
                     <div class="col">
-                        <h3>Our Campsites</h3>
-                        <div class="d-none d-sm-block">
-                            <p>Explore our growing database of curated campsites and leave your own reviews!</p>
+                        <div class="media">
+                            <div class="mr-3">
+                                <img src="img/breadcrumb-trail-thumb.jpg" class="img-thumbnail"
+                                    alt="Breadcrumb Trail thumbnail">
+                            </div>
+                            <div class="media-body align-self-center">
+                                <div class="d-none d-sm-block">
+                                    <h3>Our Campsites</h3>
+                                    <p>Explore our growing database of curated campsites and leave your own reviews!
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> <!---->
+                </div> 
             </div>
         </div>
 
@@ -75,14 +93,13 @@
             <div class="col">
                 <div class="media">
                     <div class="media body">
-                        <div class="d-none d-sm-block">
+                        <div class="d-none d-sm-block"> <!--hidden only on xs-->
                             <h3>React Lake Campground</h3>
-
                             <p>Nestled in the foothills of the Chrome Mountains, this campground on the shores of the
                                 pristine
                                 React Lake is a favorite for fly fishers.</p>
                         </div class="ml-3">
-                        <img src="bootstrap-week2-task-1.jpg" class="img-thumbnail" alt="img-thumbnail">
+                        <img src="img/react-lake-thumb.jpg" class="img-thumbnail" alt="React Lake Thumbnail">
                     </div>
                 </div>
             </div>
@@ -93,43 +110,66 @@
                 <h2 class="text-sm-right"> Our Community Partners</h2>
             </div>
             <div class="col">
-                <h3>Bootstrap Outfitters</h3>
-                <div class="d-none d-sm-block">
-                    <p>Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                <div class="media">
+                    <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                    <div class="media-body align-self-center">
+                        <div class="d-none d-sm-block">
+                            <h3>Bootstrap Outfitters</h3>
+                            <p>Bootstrap Outfitters supplies you with the gear you need at prices you can't beat.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row row-content">
-            <div class="column col-sm-6 mx-auto">
+            <div class="column col-sm-12 mx-auto">
                 <div class="card">
                     <h3 class="text-light bg-info card-header">
                         Reserve Campsite</h3>
                     <div class="card-body">
+                        <form id="reserveForm" class="form-group col-form-label">
+                            <div class="container">
+                                <div class="row form-group ign-items-center">
+                              <div class="col-sm order-sm-last">
+                                <label class="col col-sm col-form-label"> Number of Campers</label></div>
+                                <div class="col-sm order-sm-last">
+                                   <div class="col">
+                                        <select class="form-control" name="numCampers" id="numCampers">
+                                            <option value="select"> Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="5">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                  </div>
+                                </div> 
+                            </div>
+                                <div class="container">
+                                  <div class="row form-group ign-items-center p-3"> 
 
-                        <form id="reserveForm">
-                            <div class="row form-group">
-                                <label class="col col-sm-6"> Number of Campers</label>
-                                <div class="col">
-                                    <select class="form-control" name="numCampers" id="numCampers">
-                                        <option> Select...</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5</option>
-                                        <option>6</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row form-group">
-                            </div>
-                            <select date="date"></date>
-                        </form>
+                                        <div class=" col-sm">
+                                            <label for="date" class="col-form-label"> Date</label>
+                                        </div>
+                                        <div class="col-sm">
+                                            <select class="form-control" for="date" date="date">
+                                                <option> mm/dd/yyyy</option>
+                                            </select>
+                                        </div>
+                                 </div>
+                <div class="col-sm-6 order-sm-last">
+                    <div class="col">
+                        <button type="button" type="submit" class="btn btn-primary"> Search </button>
                     </div>
                 </div>
-
+                </form>
             </div>
         </div>
+        </div>
+    </div>
+    </div>
     </div>
 
     <footer>
@@ -168,7 +208,6 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
