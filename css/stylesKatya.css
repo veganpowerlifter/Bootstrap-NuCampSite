@@ -3,11 +3,11 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: "Lobster", cursive;
+    font-family: "Times New Roman", oblique;
 }
 
 h2 {
-    color: #3046C5;
+    color: #2C6550;
 }
 
 header h2 {
@@ -22,7 +22,7 @@ footer {
 .jumbotron {
     margin:0;
     padding: 30px;
-    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+    background-image: linear-gradient(to right, #2C6550, #003D71);
     color: white;
 }
 
@@ -32,7 +32,7 @@ footer {
     min-height: 200px;
 }
 .navbar{
-    background-color:#902cad;
+    background-color:#003D71;
 }
 .tab-content{
     border: 1px solid #DDD;
@@ -44,9 +44,9 @@ a, a:hover {
     text-decoration: none;
   }
   .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 32, 0, 0.5);
 }
 
 .carousel {
-    border: solid #5637DD;
+    border: solid #2C6550;
 }
